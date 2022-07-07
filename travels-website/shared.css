@@ -27,7 +27,7 @@ header li {
    margin-left: 20px;
 }
 
-header li>a {
+header a {
    color: rgb(255, 251, 0);
    text-decoration: none;
    font-size: 20px;
@@ -36,7 +36,7 @@ header li>a {
    border-radius: 6px;
 }
 
-header li>a:hover {
+header nav a:hover {
    color: rgb(77, 77, 77);
    background-color: rgb(255, 251, 0);
    transition: 0.3s;

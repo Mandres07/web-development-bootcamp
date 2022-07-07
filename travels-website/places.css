@@ -3,15 +3,31 @@ body {
    color: rgb(68, 68, 68);
 }
 
+#page-logo a {
+   color: rgb(183, 230, 235);
+}
+
 header {
    position: static;
 }
 
+header a {
+   color: rgb(183, 230, 235);
+}
+
+header nav a:hover {
+   color: rgb(59, 59, 59);
+   background-color: rgb(183, 230, 235);
+}
+
 main ul {
-   width: 1000px;
-   margin: 0 auto;
-   display: flex;
-   flex-wrap: wrap;
+   width: 1200px;
+   margin: 0 auto 48px auto;
+   display: grid;
+   /* set number of columns and each column width. 1fr means the half in this case */
+   grid-template-columns: 1fr 1fr;
+   /* define the gaps (space between columns) format: row column */
+   gap: 20px 20px;
 }
 
 main li {
@@ -20,7 +36,15 @@ main li {
    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
    border-radius: 6px;
    overflow: hidden;
-   width: 500px;
+}
+
+main li.w-100 {
+   grid-column: 1 / span 2;
+}
+
+/* selecting the 3 child li */
+main li:nth-of-type(3) {
+   grid-column: 1 / span 2;
 }
 
 main li img {
@@ -30,6 +54,7 @@ main li img {
 }
 
 .item-content {
+   width: 100%;
    padding: 24px;
    display: flex;
    flex-direction: column;
