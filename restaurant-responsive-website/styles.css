@@ -1,0 +1,107 @@
+body {
+   font-family: 'Open Sans', sans-serif;
+   margin: 0;
+   background-color: rgb(44, 41, 38);
+   background: linear-gradient(35deg, rgb(44, 41, 38), rgb(47, 43, 41));
+}
+
+ul {
+   margin: 0;
+   padding: 0;
+   list-style: none;
+}
+
+a {
+   text-decoration: none;
+}
+
+main h1 {
+   text-align: center;
+   font-size: 48px;
+   color: rgb(238, 164, 80);
+   text-transform: capitalize;
+}
+
+#main-header {
+   height: 80px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   background-color: rgb(29, 26, 24);
+   padding: 0 20px;
+}
+
+#logo {
+   font-size: 24px;
+   font-weight: bold;
+   color: rgb(238, 164, 80);
+   text-transform: uppercase;
+}
+
+#main-header nav ul {
+   display: flex;
+}
+
+#main-header nav li {
+   margin: 0 16px;
+   text-align: right;
+}
+
+#main-header nav a {
+   color: rgb(185, 131, 31);
+   font-size: 20px;
+}
+
+#main-header nav a:hover {
+   color: rgb(228, 163, 44);
+   transition: 0.3s;
+}
+
+#latest-products {
+   width: 80%;
+   margin: 50px auto;
+}
+
+#latest-products ul {
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   gap: 16px;
+}
+
+.food-item {
+   background-color: rgb(228, 206, 182);
+   border-radius: 6px;
+   overflow: hidden;
+}
+
+.food-item img {
+   height: 240px;
+   width: 100%;
+   object-fit: cover;
+}
+
+.food-item-content {
+   padding: 16px;
+   text-align: center;
+}
+
+h2 {
+   /* Basado en el font-size del parent element */
+   /* font-size: 200%; */
+   /* Basado en el font-size del parent element */
+   /* font-size: 2em; */
+   /* Basado en el font-sixe del root (html) element */
+   font-size: 2rem;
+}
+
+.btn {
+   background-color: rgb(228, 157, 44);
+   color: white;
+   border-radius: 4px;
+   padding: 8px 24px;
+}
+
+.btn:hover {
+   background-color: rgb(221, 134, 34);
+   transition: 0.3s;
+}
