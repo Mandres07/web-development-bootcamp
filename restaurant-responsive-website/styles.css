@@ -17,22 +17,22 @@ a {
 
 main h1 {
    text-align: center;
-   font-size: 48px;
+   font-size: 3rem;
    color: rgb(238, 164, 80);
    text-transform: capitalize;
 }
 
 #main-header {
-   height: 80px;
+   height: 5rem;
    display: flex;
    justify-content: space-between;
    align-items: center;
    background-color: rgb(29, 26, 24);
-   padding: 0 20px;
+   padding: 0 5%;
 }
 
 #logo {
-   font-size: 24px;
+   font-size: 1.5rem;
    font-weight: bold;
    color: rgb(238, 164, 80);
    text-transform: uppercase;
@@ -43,13 +43,13 @@ main h1 {
 }
 
 #main-header nav li {
-   margin: 0 16px;
+   margin: 0 1rem;
    text-align: right;
 }
 
 #main-header nav a {
    color: rgb(185, 131, 31);
-   font-size: 20px;
+   font-size: 1.25rem;
 }
 
 #main-header nav a:hover {
@@ -57,15 +57,59 @@ main h1 {
    transition: 0.3s;
 }
 
+#side-drawer {
+   display: none;
+   width: 100%;
+   height: 100%;
+   background-color: rgb(29, 26, 27);
+   position: fixed;
+   top: 0;
+   left: 0;
+}
+
+/* Activated when url has this id on the url */
+#side-drawer:target {
+   display: block;
+}
+
+#side-drawer header {
+   height: 5rem;
+   display: flex;
+   justify-content: flex-end;
+   align-items: center;
+   padding: 0 5%;
+}
+
+#side-drawer ul {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   padding: 4rem 1rem;
+}
+
+#side-drawer a {
+   color: rgb(253, 239, 213);
+   font-size: 2rem;
+}
+
+#side-drawer li {
+   margin: 0.5rem 0;
+}
+
+#side-drawer a:hover {
+   color: rgb(248, 207, 131);
+   transition: 0.3s;
+}
+
 #latest-products {
    width: 80%;
-   margin: 50px auto;
+   margin: 2rem auto;
 }
 
 #latest-products ul {
    display: grid;
    grid-template-columns: 1fr 1fr;
-   gap: 16px;
+   gap: 1.5rem;
 }
 
 .food-item {
@@ -75,33 +119,67 @@ main h1 {
 }
 
 .food-item img {
-   height: 240px;
+   height: 15rem;
    width: 100%;
    object-fit: cover;
 }
 
 .food-item-content {
-   padding: 16px;
+   padding: 1rem;
    text-align: center;
 }
 
-h2 {
+.food-item h2 {
    /* Basado en el font-size del parent element */
    /* font-size: 200%; */
    /* Basado en el font-size del parent element */
    /* font-size: 2em; */
    /* Basado en el font-sixe del root (html) element */
-   font-size: 2rem;
+   font-size: 1.5rem;
+   margin: 0 0 1rem 0;
 }
 
 .btn {
    background-color: rgb(228, 157, 44);
    color: white;
    border-radius: 4px;
-   padding: 8px 24px;
+   padding: 0.5rem 1.5rem;
 }
 
 .btn:hover {
    background-color: rgb(221, 134, 34);
    transition: 0.3s;
+}
+
+.menu-btn {
+   width: 3rem;
+   height: 3rem;
+   display: none;
+   flex-direction: column;
+   justify-content: space-around;
+}
+
+.menu-btn span {
+   width: 100%;
+   height: 3px;
+   background-color: white;
+}
+
+/* 48rem = 768px si el root (html) font-size es = 16px */
+@media (max-width: 48rem) {
+   main h1 {
+      font-size: 1.5rem;
+   }
+
+   #main-header nav {
+      display: none;
+   }
+
+   .menu-btn {
+      display: flex;
+   }
+
+   #latest-products ul {
+      grid-template-columns: 1fr;
+   }
 }
