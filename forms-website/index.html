@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="/styles.css">
+   <title>HTML Forms</title>
+</head>
+
+<body>
+   <header>
+      <h1>Demo Form</h1>
+   </header>
+   <main>
+      <form action="/" method="GET">
+         <section>
+            <h2>Your personal details</h2>
+            <ul>
+               <li>
+                  <label for="name">Your name</label>
+                  <input type="text" name="user-name" id="name" placeholder="Mario Morales" required>
+               </li>
+               <li>
+                  <label for="email">Your E-mail</label>
+                  <input type="email" name="user-email" id="email" required>
+               </li>
+               <li>
+                  <label for="password">Your password</label>
+                  <input type="password" name="user-password" id="password" required minlength="6">
+               </li>
+            </ul>
+         </section>
+         <hr>
+         <section>
+            <h2>More details</h2>
+            <ul>
+               <li>
+                  <label for="age">Your age</label>
+                  <input type="number" name="user-age" id="age" step="1" required min="18" max="100">
+               </li>
+               <li>
+                  <label for="birthdate">Your birthdate</label>
+                  <input type="date" name="user-birthdate" id="birthdate" required min="1921-01-01" max="2003-01-01">
+               </li>
+               <li>
+                  <label for="color">Your favorite color?</label>
+                  <select name="user-color" id="color">
+                     <option value="Blue">Blue</option>
+                     <option value="Yellow">Yellow</option>
+                     <option value="Red">Red</option>
+                  </select>
+               </li>
+            </ul>
+         </section>
+         <hr>
+         <section>
+            <label for="name">Your message</label>
+            <textarea name="user-message" id="message" name="message" rows="4"></textarea>
+         </section>
+         <hr>
+         <section>
+            <h2>How should we verify your account?</h2>
+            <ul>
+               <li class="form-control-inline">
+                  <input type="radio" name="verify" value="sms" id="verify-sms" required>
+                  <label for="verify-sms">Via text message (SMS)</label>
+               </li>
+               <li class="form-control-inline">
+                  <input type="radio" name="verify" value="phone" id="verify-phone" required>
+                  <label for="verify-phone">Via a phone call</label>
+               </li>
+               <li class="form-control-inline">
+                  <input type="radio" name="verify" value="email" id="verify-email" required>
+                  <label for="verify-email">Via an email</label>
+               </li>
+            </ul>
+         </section>
+         <hr>
+         <section>
+            <h2>How should we contact you?</h2>
+            <ul>
+               <li class="form-control-inline">
+                  <input type="checkbox" name="contact" value="email" id="contact-email">
+                  <label for="contact-email">Contact me via e-mail</label>
+               </li>
+               <li class="form-control-inline">
+                  <input type="checkbox" name="contact" value="phone" id="contact-phone">
+                  <label for="contact-phone">Contact me via phone</label>
+               </li>
+            </ul>
+         </section>
+         <hr>
+         <section>
+            <div class="form-control-inline">
+               <input type="checkbox" name="terms" value="true" id="terms">
+               <label for="terms">Agree to terms?</label>
+            </div>
+         </section>
+         <section>
+            <div class="btn-container">
+               <button type="reset" style="margin-right: 1em;">Clear</button>
+               <button type="submit">Submit</button>
+            </div>
+         </section>
+      </form>
+   </main>
+</body>
+
+</html>
