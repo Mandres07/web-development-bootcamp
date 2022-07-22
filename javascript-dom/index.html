@@ -6,14 +6,32 @@
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Advanced JavaScript</title>
-   <!-- <script src="/app.js" defer></script> -->
-   <script src="/exercise.js" defer></script>
+   <link rel="stylesheet" href="/styles.css">
+   <script src="/app.js" defer></script>
 </head>
 
 <body>
+   <form action="/" method="GET">
+      <div class="control">
+         <label for="name">Product Name</label>
+         <input type="text" id="name" name="name" maxlength="60">
+         <span id="charcount">
+            <span id="remaining-chars">60</span>/60
+         </span>
+         <button type="submit">Submit</button>
+      </div>
+   </form>
+</body>
+
+<!-- <body>
+   <p style="cursor: pointer;">Click me!</p>
+   <input type="text">
+</body> -->
+
+<!-- <body>
    <h1 id="title">Hi there!</h1>
    <p>I'm new</p>
    <p>This is a <a id="external-link" href="#">link</a></p>
-</body>
+</body> -->
 
 </html>
