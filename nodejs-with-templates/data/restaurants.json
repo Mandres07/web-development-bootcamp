@@ -1,0 +1,16 @@
+[
+   {
+      "name": "KFC",
+      "address": "kfc street",
+      "cuisine": "USA Fried Chicken",
+      "website": "https://kfc.com",
+      "description": "very tasty"
+   },
+   {
+      "name": "Chimborazo",
+      "address": "Juan diaz",
+      "cuisine": "Peruvian",
+      "website": "https://chimborazo.com",
+      "description": "really really tasty"
+   }
+]
