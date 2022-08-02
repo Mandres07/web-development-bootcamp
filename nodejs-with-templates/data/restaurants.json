@@ -1,5 +1,6 @@
 [
    {
+      "id": "r1",
       "name": "KFC",
       "address": "kfc street",
       "cuisine": "USA Fried Chicken",
@@ -7,10 +8,19 @@
       "description": "very tasty"
    },
    {
+      "id": "r2",
       "name": "Chimborazo",
       "address": "Juan diaz",
       "cuisine": "Peruvian",
       "website": "https://chimborazo.com",
       "description": "really really tasty"
+   },
+   {
+      "name": "Popeyes",
+      "address": "Plaza Tocumen",
+      "cuisine": "Chicken and Fries",
+      "website": "https://popeyes.com.pa",
+      "description": "It is really tasty",
+      "id": "6f47be13-f716-45a9-b73e-c2ecb2f9a8ac"
    }
 ]
