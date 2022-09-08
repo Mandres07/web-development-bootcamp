@@ -7,6 +7,8 @@ const errorHandlerMiddleware = require('./middlewares/error-handler');
 const checkAuthMiddleware = require('./middlewares/check-auth');
 const protectedRoute = require('./middlewares/protect-routes');
 const cartMiddleware = require('./middlewares/cart');
+const notFoundHandler = require('./middlewares/not-found');
+const updateCartPricesMiddleware = require('./middlewares/update-cart-prices');
 const db = require('./data/database');
 const path = require('path');
 const authRoutes = require('./routes/auth.routes');
@@ -31,14 +33,15 @@ app.use(csrf());
 app.use(addCsrfTokenMiddleware);
 
 app.use(cartMiddleware);
+app.use(updateCartPricesMiddleware);
 app.use(checkAuthMiddleware);
-app.use(authRoutes);
 app.use(baseRoutes);
+app.use(authRoutes);
 app.use(productsRoutes);
 app.use('/cart', cartRoutes);
-app.use(protectedRoute);
-app.use('/orders', ordersRoutes);
-app.use('/admin', adminRoutes);
+app.use('/orders', protectedRoute, ordersRoutes);
+app.use('/admin', protectedRoute, adminRoutes);
+app.use(notFoundHandler);
 app.use(errorHandlerMiddleware);
 
 db.connectToDatabase().then(function () {
