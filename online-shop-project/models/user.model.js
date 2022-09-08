@@ -1,5 +1,6 @@
 const db = require('../data/database');
 const bcrypt = require('bcryptjs');
+const mongodb = require('mongodb');
 
 class User {
    constructor(email, password, name, street, postal, city) {
@@ -15,6 +16,11 @@ class User {
 
    async getUserByEmail() {
       return db.getDb().collection('users').findOne({ email: this.email });
+   }
+
+   static async getUserById(userId) {
+      const uid = new mongodb.ObjectId(userId);
+      return db.getDb().collection('users').findOne({ _id: uid }, { projection: { password: 0 } });
    }
 
    async comparePassword(hashedPassword) {
